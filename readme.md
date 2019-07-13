@@ -21,7 +21,7 @@ The most recent repository tag is always the preferred version.
 
 ## necessary configurations
 Default properties can be seen in `main/kotlin/resources/config` directory.
-Some of them need to be trimmed to the use case. Below are the most important to be set.
+Some of them need to be trimmed to the use case. Custom configurations should be added in `main/kotlin/resources` directory. Below are the most important to be set.
 
 in `application.properties`:
 ```properties

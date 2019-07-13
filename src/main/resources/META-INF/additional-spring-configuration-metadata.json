@@ -1,0 +1,28 @@
+{
+  "properties": [
+    {
+      "name": "swagger.name",
+      "type": "java.lang.String",
+      "description": "Name of the service."
+    },
+    {
+      "name": "swagger.description",
+      "type": "java.lang.String",
+      "description": "Description of the service."
+    },
+    {
+      "name": "swagger.author",
+      "type": "java.lang.String",
+      "description": "Author of the service."
+    },
+    {
+      "name": "swagger.email",
+      "type": "java.lang.String",
+      "description": "Contact email."
+    },
+    {
+      "name": "swagger.version",
+      "type": "java.lang.String",
+      "description": "Version of the service."
+    }
+  ] }

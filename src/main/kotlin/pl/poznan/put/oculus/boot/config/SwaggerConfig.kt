@@ -13,12 +13,18 @@ import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spring.web.plugins.Docket
 import springfox.documentation.swagger2.annotations.EnableSwagger2
 
-/** Annotated controller is exposed to the public api */
+/**
+ * Annotated controller is exposed to the public api in Swagger
+ *
+ * @see SwaggerConfig
+ * */
 @Target(AnnotationTarget.CLASS)
 annotation class PublicAPI
 
 /**
- * Provides universal configuration for swagger endpoint and UI
+ * Provides universal configuration for swagger endpoint and UI.
+ *
+ * To add controller to Swagger use [PublicAPI] annotation
  */
 @Configuration
 @EnableSwagger2

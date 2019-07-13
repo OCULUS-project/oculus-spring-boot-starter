@@ -8,7 +8,9 @@ import org.springframework.web.context.request.WebRequest
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
 import pl.poznan.put.oculus.boot.exception.OculusException
 
-
+/**
+ * Provides default handler for [OculusException]
+ */
 @ControllerAdvice
 class OculusExceptionHandler : ResponseEntityExceptionHandler() {
     @ExceptionHandler(value = [ OculusException::class ])

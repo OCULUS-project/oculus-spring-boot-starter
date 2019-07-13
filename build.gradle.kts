@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "pl.poznan.put.oculus.boot"
-version = "0.1.1"
+version = "0.1.2"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
@@ -46,4 +46,8 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.withType<Jar> {
+    enabled = true
 }

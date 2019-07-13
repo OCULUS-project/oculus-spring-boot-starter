@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  pl.poznan.put.oculus.boot.config.SwaggerConfig

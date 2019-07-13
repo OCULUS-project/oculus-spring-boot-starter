@@ -1,5 +1,6 @@
 package pl.poznan.put.oculus.boot.config
 
+import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -35,6 +36,7 @@ class SwaggerConfig (
 ) {
     @Bean
     fun api(): Docket {
+        logger.debug("initializing Swagger bean")
         return Docket(DocumentationType.SWAGGER_2)
             .useDefaultResponseMessages(false)
             .select()
@@ -52,5 +54,9 @@ class SwaggerConfig (
             .licenseUrl("#")
             .version(version)
             .build()
+    }
+
+    companion object {
+        private val logger = LoggerFactory.getLogger(SwaggerConfig::class.java)
     }
 }

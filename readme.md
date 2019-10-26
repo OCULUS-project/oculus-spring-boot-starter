@@ -1,5 +1,5 @@
 # oculus-spring-boot-starter
-[![](https://jitpack.io/v/OCULUS-project/oculus-spring-boot-starter.svg)](https://jitpack.io/#OCULUS-project/oculus-spring-boot-starter)
+[![library](https://api.bintray.com/packages/jakubriegel/oculus/oculus-spring-boot-starter/images/download.svg)](https://bintray.com/jakubriegel//kotlin-shell/kotlin-shell-core/_latestVersion)
 
 Starter dependency for OCULUS services. 
 Includes `spring-boot-web-starter`, `OculusException`, swagger and logging configuration as well as some basic properties 
@@ -9,11 +9,13 @@ Includes `spring-boot-web-starter`, `OculusException`, swagger and logging confi
 Just add these to `build.gradle.kts`:
 ```kotlin
 repositories {
-    maven(url = "https://jitpack.io")
+    mavenCentral()
+    maven("https://dl.bintray.com/jakubriegel/oculus")
+    maven("http://oss.jfrog.org/artifactory/oss-snapshot-local/")
 }
 
 dependencies {
-    implementation("com.github.OCULUS-project:oculus-spring-boot-starter:<TAG>")
+    implementation("pl.poznan.put.oculus.boot:oculus-spring-boot-starter:VERSION")
 }
 ```
 

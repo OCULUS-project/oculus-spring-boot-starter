@@ -11,7 +11,8 @@ import springfox.documentation.service.ApiInfo
 import springfox.documentation.service.Contact
 import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spring.web.plugins.Docket
-import springfox.documentation.swagger2.annotations.EnableSwagger2
+import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc
+
 
 /**
  * Annotated controller is exposed to the public api in Swagger
@@ -27,7 +28,7 @@ annotation class PublicAPI
  * To add controller to Swagger use [PublicAPI] annotation
  */
 @Configuration
-@EnableSwagger2
+@EnableSwagger2WebMvc
 class SwaggerConfig (
     @Value("\${swagger.name}")
     val name: String,

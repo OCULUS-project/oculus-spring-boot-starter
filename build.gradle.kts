@@ -14,7 +14,7 @@ plugins {
 }
 
 group = "pl.poznan.put.oculus.boot"
-version = "0.2.1"
+version = "0.2.2"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
@@ -23,7 +23,7 @@ repositories {
     maven("http://oss.jfrog.org/artifactory/oss-snapshot-local/")
 }
 
-val swaggerVersion = "3.0.0-SNAPSHOT"
+val swaggerVersion = "2.9.2"
 
 dependencies {
     // kotlin
@@ -32,13 +32,15 @@ dependencies {
 
     // spring
     api("org.springframework.boot:spring-boot-starter-web")
-    api("org.springframework.boot:spring-boot-starter-hateoas")
+    api("org.springframework.boot:spring-boot-starter-hateoas") {
+        exclude("org.springframework.plugin", "spring-plugin-core")
+    }
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
     // jackson
     api("com.fasterxml.jackson.module:jackson-module-kotlin")
 
-//    // swagger / springfox
+    // swagger / springfox
     api("io.springfox:springfox-swagger2:$swaggerVersion")
     api("io.springfox:springfox-swagger-ui:$swaggerVersion")
 
@@ -80,9 +82,6 @@ tasks {
     dokka {
         outputFormat = "javadoc"
         outputDirectory = "${project.buildDir}/javadoc"
-//        jdkVersion = 8
-//        reportUndocumented = false
-//        sourceDirs = files("src/main/kotlin")
     }
 }
 

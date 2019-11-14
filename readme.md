@@ -8,7 +8,7 @@ Includes `spring-boot-web-starter`, `OculusException`, swagger and logging confi
 
 Just add these to `build.gradle.kts`:
 ```kotlin
-repositories {
+plugins {
     id("org.springframework.boot") version "2.2.0.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
     kotlin("jvm") version "1.3.50"

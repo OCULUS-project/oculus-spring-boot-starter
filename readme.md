@@ -15,7 +15,13 @@ plugins {
     kotlin("plugin.spring") version "1.3.50"
 }
 
+repositories {
+    mavenCentral()
+    maven("https://dl.bintray.com/jakubriegel/oculus")
+}
+
 dependencies {
+    // oculus
     implementation("pl.poznan.put.oculus.boot:oculus-spring-boot-starter:VERSION")
 }
 ```

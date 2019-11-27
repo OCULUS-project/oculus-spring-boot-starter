@@ -28,6 +28,13 @@ dependencies {
 
 The most recent repository tag is always the preferred version.
 
+For using oculus beans and components add:
+```kotlin
+@SpringBootApplication
+@ComponentScan("pl.poznan.put.oculus.boot", "")
+class OculusServiceApplication
+```
+
 ## necessary configurations
 Default properties can be seen in `main/kotlin/resources/config` directory.
 Some of them need to be trimmed to the use case. Custom configurations should be added in `main/kotlin/resources` directory. Below are the most important to be set.

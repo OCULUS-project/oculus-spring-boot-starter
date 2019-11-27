@@ -9,10 +9,10 @@ Includes `spring-boot-web-starter`, `OculusException`, swagger and logging confi
 Just add these to `build.gradle.kts`:
 ```kotlin
 plugins {
-    id("org.springframework.boot") version "2.2.0.RELEASE"
+    id("org.springframework.boot") version "2.2.1.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
-    kotlin("jvm") version "1.3.50"
-    kotlin("plugin.spring") version "1.3.50"
+    kotlin("jvm") version "1.3.60"
+    kotlin("plugin.spring") version "1.3.60"
 }
 
 repositories {
@@ -27,6 +27,13 @@ dependencies {
 ```
 
 The most recent repository tag is always the preferred version.
+
+For using oculus beans and components add:
+```kotlin
+@SpringBootApplication
+@ComponentScan("pl.poznan.put.oculus.boot", "")
+class OculusServiceApplication
+```
 
 ## necessary configurations
 Default properties can be seen in `main/kotlin/resources/config` directory.
